@@ -1,27 +1,27 @@
 var questions = [{
     title: "Commonly used data types DO NOT include..",
-    choices: ["strings", "booleans", "alerts", "numbers"],
-    answer: "alerts"
+    choices: ["Strings", "Booleans", "Alerts", "Numbers"],
+    answer: "Alerts"
 },
 {
     title: "String values must be enclosed within ____ when being assigned to variables.",
-    choices: ["commas", "curly brackets", "quotes", "parenthesis"],
-    answer: "quotes"
+    choices: ["Commas", "Curly Brackets", "Quotes", "Parenthesis"],
+    answer: "Quotes"
 },
 {
     title: "The condition in an if / else statement is enclosed within ____.",
-    choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-    answer: "parentheses"
+    choices: ["Quotes", "Curly Brackets", "Parentheses", "Square Brackets"],
+    answer: "Parentheses"
 },
 {
     title: "Arrays in Javascript can be used to store ____.",
-    choices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
-    answer: "all of the above"
+    choices: ["Numbers and Strings", "Other Arrays", "Booleans", "All of the above"],
+    answer: "All of the above"
 },
 {
     title: "Which built-in method adds one or more elements to the end of an array and returns the new length of the array?",
-    choices: ["last", "put", "push", "pop"],
-    answer: "push"
+    choices: ["Last", "Put", "Push", "Pop"],
+    answer: "Push"
 }
 ]
 
@@ -89,3 +89,39 @@ function setScore() {
     
     resetGame();
     }
+
+    //resets game
+function resetGame() {
+    clearInterval(timer);
+    score = 0;
+    currentQuestion = -1;
+    timeLeft = 0;
+    timer = null;
+    
+    document.getElementById("timeLeft").innerHTML = timeLeft;
+    
+    var quizContent = `
+    <h1>
+        JavaScript Quiz!
+    </h1>
+    <h3>
+        Click To Start Quiz   
+    </h3>
+    <button onclick="start()">Start!</button>`;
+    
+    document.getElementById("quizBody").innerHTML = quizContent;
+    }
+    
+    //deduct 15seconds from the timer if user chooses an incorrect answer
+    function incorrect() {
+    timeLeft -= 15; 
+    next();
+    }
+    
+    //increases the score by 20points if the user chooses the correct answer
+    function correct() {
+    score += 20;
+    next();
+    }
+
+    
