@@ -1,12 +1,12 @@
-
+/*timer*/
 .right {
     float: right;
 }
-
+/*high score*/
 .left {
     float: left;
 }
-
+/* font for title screen*/
 h1 {
     color:black;
     font-weight: bolder;
@@ -38,7 +38,7 @@ body {
     font-family: 'Roboto Slab', arial;
     background-color: whitesmoke;
 }
-
+/*centering main quiz content*/
 #quizBody {
     text-align: center;
     padding: 12vh;
@@ -49,7 +49,7 @@ a {
     text-decoration: none;
     color: black;
 }
-
+/*button design*/
 button {
     border: 2px solid black;
     background-color: lightgray;

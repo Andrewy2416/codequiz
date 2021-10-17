@@ -1,3 +1,4 @@
+//question and answer arrays
 var questions = [{
     title: "Commonly used data types DO NOT include..",
     choices: ["Strings", "Booleans", "Alerts", "Numbers"],
@@ -25,6 +26,7 @@ var questions = [{
 }
 ]
 
+//baseline values
 var score = 0;
 var currentQuestion = -1;
 var timeLeft = 0;
